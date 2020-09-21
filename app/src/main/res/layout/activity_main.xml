@@ -46,12 +46,13 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView2"
         app:layout_constraintStart_toStartOf="@+id/cardView2"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
         <TextView
             android:id="@+id/textView3"
@@ -61,4 +62,25 @@
             android:text="Meet up lewat Line Meetings"
             android:textAlignment="center" />
     </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/textinput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="336dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="157dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="16dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="@+id/textinput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textinput"
+        app:layout_constraintVertical_bias="0.75" />
 </androidx.constraintlayout.widget.ConstraintLayout>
