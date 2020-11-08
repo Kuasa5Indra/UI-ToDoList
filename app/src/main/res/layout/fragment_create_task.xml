@@ -7,7 +7,7 @@
     tools:context=".activity.CreateTaskActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/titleTextField"
+        android:id="@+id/c_titleTextField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         app:startIconDrawable="@drawable/ic_baseline_note_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/titleEditText"
+            android:id="@+id/c_titleEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textShortMessage|text" />
@@ -31,19 +31,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/desciptionTextField"
+        android:id="@+id/c_desciptionTextField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="Description"
-        app:layout_constraintEnd_toEndOf="@+id/titleTextField"
-        app:layout_constraintStart_toStartOf="@+id/titleTextField"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextField"
+        app:layout_constraintEnd_toEndOf="@+id/c_titleTextField"
+        app:layout_constraintStart_toStartOf="@+id/c_titleTextField"
+        app:layout_constraintTop_toBottomOf="@+id/c_titleTextField"
         app:startIconDrawable="@drawable/ic_baseline_description_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/descriptionEditText"
+            android:id="@+id/c_descriptionEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textLongMessage|text" />
@@ -51,38 +51,38 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dateTextField"
+        android:id="@+id/c_dateTextField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="Date"
-        app:layout_constraintStart_toStartOf="@+id/desciptionTextField"
-        app:layout_constraintTop_toBottomOf="@+id/desciptionTextField"
+        app:layout_constraintStart_toStartOf="@+id/c_desciptionTextField"
+        app:layout_constraintTop_toBottomOf="@+id/c_desciptionTextField"
         app:startIconDrawable="@drawable/ic_baseline_calendar_today_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dateEditText"
+            android:id="@+id/c_dateEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/timeTextField"
+        android:id="@+id/c_timeTextField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:hint="Time"
-        app:layout_constraintBottom_toBottomOf="@+id/dateTextField"
-        app:layout_constraintEnd_toEndOf="@+id/desciptionTextField"
-        app:layout_constraintStart_toEndOf="@+id/dateTextField"
-        app:layout_constraintTop_toTopOf="@+id/dateTextField"
+        app:layout_constraintBottom_toBottomOf="@+id/c_dateTextField"
+        app:layout_constraintEnd_toEndOf="@+id/c_desciptionTextField"
+        app:layout_constraintStart_toEndOf="@+id/c_dateTextField"
+        app:layout_constraintTop_toTopOf="@+id/c_dateTextField"
         app:startIconDrawable="@drawable/ic_baseline_access_time_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/timeEditText"
+            android:id="@+id/c_timeEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="time" />
@@ -96,8 +96,8 @@
         android:backgroundTint="#4CAF50"
         android:text="Create Task"
         app:icon="@drawable/ic_baseline_add_24"
-        app:layout_constraintEnd_toEndOf="@+id/timeTextField"
-        app:layout_constraintStart_toStartOf="@+id/dateTextField"
-        app:layout_constraintTop_toBottomOf="@+id/dateTextField" />
+        app:layout_constraintEnd_toEndOf="@+id/c_timeTextField"
+        app:layout_constraintStart_toStartOf="@+id/c_dateTextField"
+        app:layout_constraintTop_toBottomOf="@+id/c_dateTextField" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

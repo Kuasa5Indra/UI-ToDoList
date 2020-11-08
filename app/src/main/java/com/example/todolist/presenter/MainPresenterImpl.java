@@ -3,22 +3,21 @@ package com.example.todolist.presenter;
 import android.content.Context;
 
 import com.example.todolist.adapter.TaskAdapter;
+import com.example.todolist.helper.ToDoListDbHelper;
 import com.example.todolist.model.Task;
 import com.example.todolist.view.MainView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainPresenterImpl implements MainPresenter {
 
     private MainView view;
-    protected List<Task> taskList;
+    private List<Task> taskList;
+    private ToDoListDbHelper dbHelper;
 
-    public MainPresenterImpl(MainView view) {
+    public MainPresenterImpl(MainView view, Context context) {
         this.view = view;
-        taskList = new ArrayList<>();
-        taskList.add(new Task("Judul", "deskripsi", "jam 1"));
-        taskList.add(new Task("Judul 2", "deskripsi 2", "jam 2"));
+        dbHelper = new ToDoListDbHelper(context);
     }
 
     @Override
@@ -28,7 +27,20 @@ public class MainPresenterImpl implements MainPresenter {
 
     @Override
     public void onLoadTasks(Context context) {
+        taskList = dbHelper.getTasks();
         TaskAdapter adapter = new TaskAdapter(context, taskList);
         view.setupToDoList(adapter);
+    }
+
+    @Override
+    public void onDeleteTask(int id) {
+        int idTask = taskList.get(id).getId();
+        dbHelper.deleteTask(idTask);
+    }
+
+    @Override
+    public void onEditTask(int id) {
+        Task task = taskList.get(id);
+        view.redirectToEditTaskForm(task);
     }
 }
